@@ -92,10 +92,15 @@ export default class TransactionScreen extends Component {
       }
       
         } else {
-         var isEligible = await this.checkStudentEligibilityForBookReturn(
-        bookId,
-        studentId
-      );
+          
+          // INSIRA O CODIGO AQUI
+          // crie um var chamada  isEligible iguale ela a 
+          // chamada da função  checkStudentEligibilityForBookReturn 
+     
+          
+          
+          
+          
 
       if (isEligible) {
         var { bookName, studentName } = this.state;
@@ -192,26 +197,13 @@ export default class TransactionScreen extends Component {
   
   
  checkStudentEligibilityForBookReturn = async (bookId, studentId) => {
-    const transactionRef = await db
-      .collection("transactions")
-      .where("book_id", "==", bookId)
-      .limit(1)
-      .get();
-    var isStudentEligible = "";
-    transactionRef.docs.map(doc => {
-      var lastBookTransaction = doc.data();
-      if (lastBookTransaction.student_id === studentId) {
-        isStudentEligible = true;
-      } else {
-        isStudentEligible = false;
-        Alert.alert("O livro não foi retirado por este aluno!");
-        this.setState({
-          bookId: "",
-          studentId: ""
-        });
-      }
-    });
-    return isStudentEligible;
+   
+   
+   
+   
+   
+   
+   
   };
   
   
